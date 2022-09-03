@@ -1,23 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
-import { Card } from "../../components/Card";
-import { Container, Content } from "./layout";
+import { MovieCard } from "../../components/MovieCard";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import api from "../../services/api";
+
+
 const Home = () => {
+  const [products, setProductsList] = useState([]);
+
   useEffect(() => {
-    api.get("products").then((response) => {
-      console.log(response);
-    }).catch((err) => {
-      alert(err)
-    });
-  });
+    (async () => {
+      const { data } = await api.get("/products");
+      setProductsList(data);
+    })();
+  }, []);
+
   return (
     <>
       <Header></Header>
       <Container>
-        <Content>
-          <Card />
-        </Content>
+        <Row>
+          {products.map((product, index) => {
+            return (
+              <Col xl={4} lg={4} md={6} sm={12}>
+                <MovieCard key={index} product={product}></MovieCard>;
+              </Col>
+            );
+          })}
+        </Row>
       </Container>
     </>
   );

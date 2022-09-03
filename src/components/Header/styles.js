@@ -8,17 +8,19 @@ export const Content = styled.div`
   padding: 5px;
   display: flex;
   height: 100px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  max-width: 80%;
   h3 {
     color: var(--white);
     font-weight: 600;
+    font-size: 20px;
   }
   h5 {
     color: var(--white);
     font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 14px;
   }
   span {
     color: var(--grey);
