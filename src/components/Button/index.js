@@ -5,7 +5,7 @@ import AddToCartIcon from "../../assets/addToCart.svg"
 export function Button(props) {
   return (
     <Container>
-      <button type="button">
+      <button onClick={props.clicked} type="button">
         { props.hasIcon && 
           <div>
             <img src={AddToCartIcon} alt="cartIcon"></img> 

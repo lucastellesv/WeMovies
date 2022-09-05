@@ -3,9 +3,11 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
     :root {
         --background: #2F2E41;
+        --background-light: #3F3D56;
         --white: #fff;
         --blue: #009EDD;
-        --grey: #999999
+        --grey: #999999;
+        --light-grey: #D9D9D9;
     }
     * {
         margin: 0;

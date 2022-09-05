@@ -5,9 +5,9 @@ export const Container = styled.div`
     border-radius: 4px;
     position: relative;
     height: 40px;
+    width: 100%;
     background: var(--blue);
     text-align: center;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;

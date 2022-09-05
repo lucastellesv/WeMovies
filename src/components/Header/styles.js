@@ -11,10 +11,12 @@ export const Content = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 40px;
   h3 {
     color: var(--white);
     font-weight: 600;
     font-size: 20px;
+    cursor: pointer;
   }
   h5 {
     color: var(--white);
