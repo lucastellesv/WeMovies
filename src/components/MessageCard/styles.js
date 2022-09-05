@@ -18,5 +18,3 @@ export const Container = styled.div`
 export const Title = styled.h5`
   margin-bottom: 50px;
 `;
-
-

@@ -10,9 +10,9 @@ import { removeItem, addItem, removeIndex } from "../../store/cart";
 export function ProductsCheckoutTable(props) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-  const cartDistincted = _.uniqBy(cart, 'id');
+  const cartDistincted = _.uniqBy(cart, "id");
   let total = 0;
-  cart.map((x) => {
+  cart.forEach((x) => {
     total += x.price;
   });
   function addItemCart(item) {
@@ -44,7 +44,11 @@ export function ProductsCheckoutTable(props) {
               return (
                 <tr key={index}>
                   <td>
-                    <img style={{ maxWidth: "90px" }} src={product.image}></img>
+                    <img
+                      style={{ maxWidth: "90px" }}
+                      alt="productImage"
+                      src={product.image}
+                    ></img>
                   </td>
                   <td>
                     {product.title} <br></br> R${" "}
@@ -52,6 +56,7 @@ export function ProductsCheckoutTable(props) {
                   </td>
                   <td>
                     <img
+                      alt="minusIcon"
                       style={{ cursor: "pointer" }}
                       onClick={() =>
                         removeOne(cart.findIndex((x) => x.id === product.id))
@@ -66,6 +71,7 @@ export function ProductsCheckoutTable(props) {
                       readOnly
                     ></Input>{" "}
                     <img
+                      alt="plusIcon"
                       style={{ cursor: "pointer" }}
                       onClick={() => addItemCart(product)}
                       src={plusIcon}
@@ -81,6 +87,7 @@ export function ProductsCheckoutTable(props) {
                   </td>
                   <td>
                     <img
+                      alt="trashCanIcon"
                       style={{ cursor: "pointer" }}
                       onClick={() => removeItemCart(product.id)}
                       src={trashCanIcon}

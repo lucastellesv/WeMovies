@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { Container, Content } from "./layout";
+import { Container } from "./layout";
 import emptyCartImage from "../../assets/emptyCart.svg";
 import { ProductsCheckoutTable } from "../../components/ProductsCheckoutTable";
 import { MessageCard } from "../../components/MessageCard";
@@ -19,20 +19,18 @@ const Cart = () => {
   return (
     <>
       <Container>
-        <Content>
-          {totalItems === 0 && (
-            <MessageCard
-              title="Parece que não há nada por aqui :("
-              hasDivider={true}
-              image={emptyCartImage}
-            ></MessageCard>
-          )}
-          {totalItems > 0 && (
-            <ProductsCheckoutTable
-              finishClicked={() => completePurchase()}
-            ></ProductsCheckoutTable>
-          )}
-        </Content>
+        {totalItems === 0 && (
+          <MessageCard
+            title="Parece que não há nada por aqui :("
+            hasDivider={true}
+            image={emptyCartImage}
+          ></MessageCard>
+        )}
+        {totalItems > 0 && (
+          <ProductsCheckoutTable
+            finishClicked={() => completePurchase()}
+          ></ProductsCheckoutTable>
+        )}
       </Container>
     </>
   );

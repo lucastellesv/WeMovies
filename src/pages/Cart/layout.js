@@ -9,9 +9,3 @@ export const Container = styled.div`
   background: var(--white);
   padding: 30px;
 `;
-
-export const Content = styled.div`
-  
-`;
-
-

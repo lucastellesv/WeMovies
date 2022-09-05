@@ -11,7 +11,7 @@ export function Card(props) {
   return (
     <Container>
       <Content>
-        <img src={props.product.image}></img>
+        <img alt="productImg" src={props.product.image}></img>
         <h1>{props.product.title}</h1>
         <p>R$ {props.product.price.toFixed(2).replace(".", ",")}</p>
         <Button

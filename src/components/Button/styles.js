@@ -12,7 +12,6 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-around;
     border: none;
-
   }
   button:hover {
     background: #00adf2;
@@ -27,7 +26,7 @@ export const Container = styled.div`
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
-      margin-left: 4px
+      margin-left: 4px;
     }
 
     img {

@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 export function MessageCard(props) {
   const navigate = useNavigate();
   const back = () => {
-    navigate('/');
+    navigate("/");
   };
   return (
     <Container>
       <Title>{props.title}</Title>
-      <img src={props.image}></img>
-      {props.hasDivider && <img src={divider}></img>}
+      <img alt="cardMessageImage" src={props.image}></img>
+      {props.hasDivider && <img alt="dividerImage" src={divider}></img>}
       <Button clicked={back} btnText="Voltar"></Button>
     </Container>
   );

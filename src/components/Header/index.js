@@ -12,14 +12,13 @@ export function Header() {
     <Container>
       <Content>
         <h3 onClick={() => goTo("/")}>WeMovies</h3>
-
         <CartDiv onClick={() => goTo("/cart")}>
           <CartText>
             <h5>Meu carrinho</h5>
-            <span>{totalItems } itens</span>
+            <span>{totalItems} itens</span>
           </CartText>
           <CartIcon>
-            <img src={bagIcon}></img>
+            <img alt="bagIcon" src={bagIcon}></img>
           </CartIcon>
         </CartDiv>
       </Content>
